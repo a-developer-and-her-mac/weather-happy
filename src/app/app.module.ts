@@ -5,10 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { WeatherComponent } from './weather/weather.component';
+import { RouterModule } from '@angular/router';
+import { allAppRoutes } from './routes';
 
 @NgModule({
   declarations: [AppComponent, WeatherComponent],
-  imports: [BrowserModule, AppRoutingModule, NgbModule],
+  imports: [
+    BrowserModule,
+    NgbModule,
+    AppRoutingModule,
+    RouterModule.forRoot(allAppRoutes),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
